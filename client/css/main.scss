@@ -1,0 +1,319 @@
+// Colors
+$xwingRed: #b1271b;
+$lightGrey: #b8b8a8;
+$lightYellow: #ffd780;
+$mediumGrey: #181818;
+$darkGrey: #0e0e0a;
+
+
+body {
+    background-color: $mediumGrey;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.header {
+    text-align: center;
+    background-color: black;
+    color: $lightGrey;
+    padding: 20px;
+
+    h1 { 
+        font-family: "Scelet";
+        font-weight: 400;
+        font-size: 56pt;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    h2 {
+        font-family: "Scelet";
+        font-weight: 400;
+        font-size: 46px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }    
+}
+
+.content {
+    width: 75%;
+    margin: auto;
+
+    section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+
+        &.hidden {
+            display: none !important;
+        }
+
+        .hud {
+            background-color: $darkGrey;
+            border-style: solid;
+            border-radius: 50px;
+            border-width: 10px;
+            border-color: black;
+        
+            padding: 30px;
+            
+            display: inline-block;
+
+            &.hidden{
+                display: none;
+            }
+
+            .hud_title {
+                display: inline-block;
+                margin-bottom: 20px;
+
+                h2 {
+                    text-align: center;
+
+                    font-family: "Scelet";
+                    font-weight: 400;
+                    font-size: 56px;
+            
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    margin-bottom: 0px;
+            
+                    padding: 8px;
+                    padding-bottom: 0px;
+            
+                    color: $xwingRed;
+                    border-color: $lightYellow;
+                    border-style: solid;
+                    border-radius: 15px;
+                    border-width: 3px;
+                }
+            }
+
+            .hud_content {
+                margin-bottom: 20px;
+                margin-top: 20px;
+
+                .img_button {
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    img {
+                        width: 200px;
+                        margin: 0px;
+                    }
+                }
+
+                .ship_button {
+                    background-color: #b8b8a8;
+                    color: black;
+                    //width: 100px;
+                    //height: 100px;
+                    border-radius: 15px;
+                    border-color: #b8b8a8;
+                    border-width: 3px;
+
+                    padding: 10px;
+
+                    h3 {
+                        margin-top: 0px;
+                        font-family: 'Kumbh Sans', sans-serif;
+                        font-weight: 500;
+                    }
+
+                    &:hover {
+                        cursor: pointer;          
+                    }
+
+                    .hidden {
+                        display: none;
+                    }
+
+                    .selected {
+
+                    }
+                }
+            }
+
+            .info {
+                font-size: 1rem;
+                font-family: Arial, Helvetica, sans-serif;
+        
+                //flex-basis: 300px;
+                flex-shrink: 0;
+        
+                margin-bottom: 0px;
+                
+                padding: 50px;
+                padding-top:0px;
+                color:white;
+        
+                //width: 500px;
+        
+                h3 {
+                    margin-top: 0px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .minimap {
+            //margin:auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: space-between;
+        
+            .map {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 1.25rem;
+        
+                .sector {
+                    height: 150px;
+                    width: 150px;
+        
+                    border-color: $lightGrey;
+                    border-style: solid;
+                    border-width: 3px;
+        
+                    background-size: 25px 25px;
+                    background-image:
+                        linear-gradient(to right, grey 1px, transparent 1px),
+                        linear-gradient(to bottom, grey 1px, transparent 1px);
+        
+                    &.selected {
+                        border-color: $xwingRed;
+                        color: $xwingRed;
+        
+                        background-size: 25px 25px;
+                        background-image:
+                            linear-gradient(to right, $xwingRed 1px, transparent 1px),
+                            linear-gradient(to bottom, $xwingRed 1px, transparent 1px);
+                    }
+        
+                    .planet {
+                        font-family: "Scelet";
+                        font-weight: 200;
+                        font-size: 56px;
+                        margin-bottom: 0px;
+                        color:white;
+                    }
+        
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*
+section {
+    background-color: #0e0e0a;
+    border-style: solid;
+    border-radius: 50px;
+    border-width: 10px;
+    border-color: black;
+    width: 700px;
+
+    margin:auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    padding: 30px;
+
+    &.hidden {
+        display: none;
+    }
+    
+    .sectionTitle {
+        font-family: "Scelet";
+        font-weight: 400;
+        font-size: 56px;
+
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-bottom: 20px;
+
+        padding-top: 8px;
+
+        color: #b1271b;
+        border-color: #ffd780;
+        border-style: solid;
+        border-radius: 15px;
+        border-width: 3px;
+        text-align: center;
+    }
+
+    .factions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.25rem;
+
+        .factionChoice {
+            //width: 300px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 0px;
+
+            h3 {
+                font-family: "Scelet";
+                font-weight: 200;
+                font-size: 24px;
+                margin-bottom: 0px;
+                color:white;
+            }
+
+            div {
+                margin: 0px;
+
+                img{
+                    width: 300px;
+                    margin: 0px;
+                }
+            }
+        }
+
+        .factionChoice:hover {
+            cursor: pointer;
+        }
+    }
+}
+*/
+
+
+
+@font-face {
+    font-family: "STARWARS"; 
+    src: url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.eot"); 
+    src: url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.eot?#iefix") format("embedded-opentype"), 
+    /*url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.woff2") format("woff2"), */
+    url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/c00548f5d217ed324ae9096051927001.svg#STARWARS") format("svg"); 
+} 
+
+@font-face { 
+    font-family: "Scelet"; 
+    src: url("/client/fonts/XWingCollection_AurekFonts/SceletAF_AurekFonts/SceletAF.otf"); 
+}
+
+@font-face { 
+    font-family: "Aurebesh English"; 
+    src: url("/client/fonts/Aurebesh-English.ttf"); 
+}
+
+@font-face { 
+    font-family: "RogueAF"; 
+    src: url("/client/fonts/XWingCollection_AurekFonts/RogueAF_AurekFonts/RogueAF.otf"); 
+}
+
+@font-face {
+    font-family: "Kumbh Sans";
+    src: url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600&display=swap');
+}

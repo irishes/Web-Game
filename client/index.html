@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/client/css/main.css?v=1.0">
+        <link rel="stylesheet" href="/client/css/utils.css">
+        <link href="https://fonts.cdnfonts.com/css/aurebesh" rel="stylesheet">
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v$npm_package_version/dist/aframe-physics-system.min.js"></script>
+    </head>
+
+    <body>
+        <!--<div class="header u-hidden">
+            <h1>STAR WARS</h1>
+            <h2>STAR FIGHTER ASSAULT</h2>
+        </div>
+
+        <div id="" class="content u-hidden">
+            <section id="faction">
+                <div class="hud">
+                    <div class="hud_title">
+                        <h2>Choose Faction</h2>
+                    </div>
+
+                    <div id="factionButtons" class="hud_content u-grid-2">
+                    </div>
+                </div>
+            </section>-->
+
+            <!--<section id="ship" class="hidden">
+                <div class="hud">
+                    <div class="hud_title">
+                        <h2>Choose Ship</h2>
+                    </div>
+
+                    <div id="shipButtons" class="hud_content u-grid-2 u-txt-align-center">
+                    </div>
+                </div>
+            </section>-->
+
+            <!--<section class="u-grid-3 hidden">
+                <div>
+                </div>
+
+                <div id="minimap" class="minimap">        
+                    <div class="map">
+                        <div 
+                            id="sector1" 
+                            class="sector"
+                            name="Yavin"
+                            hasPlanet="true"
+                            occupied="Rebellion"
+                            players=""
+                            description="The Yavin system is a star system located in the Gordian Reach in the Outer Rim Territories."
+                            onClick="selectSector(this)"
+                        >
+                            <span class="planet">O</span>
+                        </div>
+                        <div 
+                            id="sector2"
+                            class="sector"
+                            name="Yavin"
+                            hasPlanet="true"
+                            occupied="Rebellion"
+                            players=""
+                            description=""
+                            onClick="selectSector(this)"
+                        >
+                        </div>
+                        <div 
+                            id="sector3" 
+                            class="sector"
+                            name="Yavin"
+                            hasPlanet="true"
+                            occupied="Rebellion"
+                            players=""
+                            description=""
+                            onClick="selectSector(this)"
+                        >
+                        </div>
+                        <div 
+                            id="sector4" 
+                            class="sector"
+                            name="Yavin"
+                            hasPlanet="true"
+                            occupied="Rebellion"
+                            players=""
+                            description=""
+                            onClick="selectSector(this)"
+                        >
+                        </div>
+                        <div 
+                            id="sector5" 
+                            class="sector"
+                            name="Courscant"
+                            hasPlanet="true"
+                            occupied="Empire"
+                            players=""
+                            description=""
+                            onClick="selectSector(this)"
+                        >
+                        </div>
+                        <div 
+                            id="sector6" 
+                            class="sector"
+                            name="Yavin"
+                            hasPlanet="true"
+                            occupied="Rebellion"
+                            players=""
+                            description="" 
+                            onClick="selectSector(this)"   
+                        >
+                        </div>
+                        <div 
+                            id="sector7" 
+                            class="sector"
+                            name="Yavin"
+                            hasPlanet="true"
+                            occupied="Rebellion"
+                            players=""
+                            description=""
+                            onClick="selectSector(this)"
+                        >
+                        </div>
+                        <div 
+                            id="sector8" 
+                            class="sector"
+                            name="Yavin"
+                            hasPlanet="true"
+                            occupied="Rebellion"
+                            players=""
+                            description=""
+                            onClick="selectSector(this)"
+                        >
+                        </div>
+                        <div 
+                            id="sector9" 
+                            class="sector"
+                            name="Death Star"
+                            hasPlanet="true"
+                            occupied="Empire"
+                            players=""
+                            description="[REDACTED]"
+                            onClick="selectSector(this)"
+                        >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info hidden u-txt-align-left">
+                    <h3 id="info-name">Name: </h3>
+                    <p id="info-description">Description: </p>
+                    <p id="info-occupied">Alligence: </p>
+                    <p id="info-players">Number of Players: </p>
+                </div>
+            </section>
+    
+            <section id="faction" class="faction">
+                <div class="hud">
+                    <div class="hud__title">
+                        <h3>Choose Faction</h3>
+                    </div>
+                    <div class="hud__content">        
+                    <div class="factions">
+                    </div>
+                </div>
+            </section>
+    
+            <section id="ship" class="ship hidden">
+                <h3 class="sectionTitle">Choose Ship</h3>
+    
+                <div class="ships">
+                </div>
+            </section>-->
+        <!--</div>-->
+        <div>
+        <a-scene id="game" class="game"renderer="antialias: true; colorManagement: true;" vr-mode-ui="enabled: false">
+            <a-entity light="type: directional; color: #fff; intensity: 0.6" position="-1 1 0"></a-entity>
+            <a-entity light="type: ambient; color: #fff; intensity: 0.03" position="-1 1 0"></a-entity>
+
+            <!--<a-camera position="0 0.5 2.5" wasd-controls="acceleration:5; easing:1;" spectator="true;"></a-camera>-->
+            <!--<a-entity camera position="0 0 2.5" wasd-controls-enabled="false" spectator="true;"></a-entity>-->
+            <!--<a-plane position="0 0 -4" rotation="-90 0 0" width="16" height="16" color="#c0c0c0"></a-plane>-->
+            <a-sky color="#000000"></a-sky>
+        </a-scene>
+        </div>
+    </body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js" integrity="sha512-xbQU0+iHqhVt7VIXi6vBJKPh3IQBF5B84sSHdjKiSccyX/1ZI7Vnkt2/8y8uruj63/DVmCxfUNohPNruthTEQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/client/js/client_options.js"></script>
+<script src="/client/js/ship.js"></script>
+<script src="/client/js/Item.js"></script>
+<script src="/client/js/gameFunctions.js"></script>
+<script src="/client/js/game_controls.js"></script>
+
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+
+<script>
+    let socket = io();
+
+    socket.on("gameSettings", function(data){
+        // Set Client Options to Game Settings
+        //setFactions(data);
+        //addXWING();
+    });
+
+    socket.on('newPosition', function(data){
+        //addBox(data.x, data.y, data.z);
+        //addXWING();
+    });
+</script>
+
+
